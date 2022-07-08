@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="omg.org/UML1.3" xmlns:UML="omg.org/UML1.3">
+  <xs:import schemaLocation="local.xsd"/>
+  <xs:element name="Model">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Namespace.ownedElement"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Diagram">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element ref="UML:Diagram.element"/>
+      </xs:sequence>
+      <xs:attribute name="diagramType" use="required" type="xs:NCName"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="owner" use="required"/>
+      <xs:attribute name="toolName" use="required"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Diagram.element">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="UML:DiagramElementSub"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Namespace.ownedElement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element ref="UML:Association"/>
+          <xs:element ref="UML:Class"/>
+          <xs:element ref="UML:Dependency"/>
+          <xs:element ref="UML:Generalization"/>
+          <xs:element ref="UML:Package"/>
+          <xs:element ref="UML:StateMachine"/>
+        </xs:choice>
+        <xs:choice minOccurs="0">
+          <xs:sequence>
+            <xs:element ref="UML:Stereotype"/>
+            <xs:element maxOccurs="unbounded" ref="UML:DataType"/>
+          </xs:sequence>
+          <xs:sequence>
+            <xs:element ref="UML:ActivityModel"/>
+            <xs:element ref="UML:Collaboration"/>
+            <xs:element maxOccurs="unbounded" ref="UML:ClassifierRole"/>
+          </xs:sequence>
+        </xs:choice>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Association">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:ModelElement.stereotype"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element ref="UML:Association.connection"/>
+      </xs:sequence>
+      <xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+      <xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+      <xs:attribute name="isRoot" use="required" type="xs:boolean"/>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Association.connection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="UML:AssociationEnd"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AssociationEnd">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="aggregation" use="required" type="xs:NCName"/>
+      <xs:attribute name="changeable" use="required" type="xs:NCName"/>
+      <xs:attribute name="isNavigable" use="required" type="xs:boolean"/>
+      <xs:attribute name="isOrdered" use="required" type="xs:boolean"/>
+      <xs:attribute name="multiplicity"/>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="targetScope" use="required" type="xs:NCName"/>
+      <xs:attribute name="type" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Class">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:ModelElement.stereotype"/>
+        <xs:element minOccurs="0" ref="UML:ModelElement.taggedValue"/>
+        <xs:element minOccurs="0" ref="UML:Classifier.feature"/>
+      </xs:sequence>
+      <xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+      <xs:attribute name="isActive" type="xs:boolean"/>
+      <xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+      <xs:attribute name="isRoot" use="required" type="xs:boolean"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="namespace"/>
+      <xs:attribute name="visibility" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Classifier.feature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="UML:Attribute"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="UML:Operation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Attribute.initialValue"/>
+        <xs:element ref="UML:StructuralFeature.type"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="changeable" use="required" type="xs:NCName"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="ownerScope" use="required" type="xs:NCName"/>
+      <xs:attribute name="targetScope" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Attribute.initialValue" type="UML:Expression"/>
+  <xs:element name="StructuralFeature.type" type="UML:Classifier"/>
+  <xs:element name="Operation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element ref="UML:BehavioralFeature.parameter"/>
+      </xs:sequence>
+      <xs:attribute name="concurrency" use="required" type="xs:NCName"/>
+      <xs:attribute name="isQuery" use="required" type="xs:boolean"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="ownerScope" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Dependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.stereotype"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="client" use="required"/>
+      <xs:attribute name="supplier" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Generalization">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="subtype" use="required"/>
+      <xs:attribute name="supertype" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Package">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="UML:ModelElement.stereotype"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element ref="UML:Namespace.ownedElement"/>
+      </xs:choice>
+      <xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+      <xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+      <xs:attribute name="isRoot" use="required" type="xs:boolean"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateMachine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="namespace" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DataType">
+    <xs:complexType>
+      <xs:attribute name="isAbstract" use="required" type="xs:boolean"/>
+      <xs:attribute name="isLeaf" use="required" type="xs:boolean"/>
+      <xs:attribute name="isRoot" use="required" type="xs:boolean"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActivityModel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:StateMachine.transitions"/>
+        <xs:element ref="UML:StateMachine.top"/>
+      </xs:sequence>
+      <xs:attribute name="context" use="required"/>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateMachine.transitions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="UML:Transition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StateMachine.top">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:CompositeState"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompositeState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:CompositeState.substate"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CompositeState.substate">
+    <xs:complexType>
+      <xs:choice maxOccurs="unbounded">
+        <xs:element ref="UML:ActionState"/>
+        <xs:element ref="UML:PseudoState"/>
+        <xs:element ref="UML:SimpleState"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActionState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="namespace" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PseudoState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="kind" type="xs:NCName"/>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="namespace" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SimpleState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:choice minOccurs="0">
+          <xs:element ref="UML:State.exit"/>
+          <xs:element ref="UML:State.internalTransition"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="namespace" use="required"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="State.exit" type="UML:ActionSequence"/>
+  <xs:element name="State.internalTransition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Transition"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Collaboration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Namespace.ownedElement"/>
+        <xs:element ref="UML:Collaboration.interaction"/>
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Collaboration.interaction">
+    <xs:complexType/>
+  </xs:element>
+  <xs:element name="ClassifierRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:ModelElement.stereotype"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="base" use="required"/>
+      <xs:attribute name="name"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+      <xs:attribute name="xmi.id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TaggedValue">
+    <xs:complexType>
+      <xs:attribute name="modelElement"/>
+      <xs:attribute name="tag" use="required"/>
+      <xs:attribute name="value"/>
+      <xs:attribute name="xmi.id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModelElement.taggedValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="UML:TaggedValue"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DiagramElementSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="geometry" use="required"/>
+      <xs:attribute name="seqno" type="xs:integer"/>
+      <xs:attribute name="style" use="required"/>
+      <xs:attribute name="subject" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModelElement.stereotype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Stereotype"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="Expression">
+    <xs:sequence>
+      <xs:element ref="UML:ExpressionSub"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExpressionSub">
+    <xs:complexType/>
+  </xs:element>
+  <xs:complexType name="Classifier">
+    <xs:sequence>
+      <xs:element ref="UML:ClassifierSub"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClassifierSub">
+    <xs:complexType>
+      <xs:attribute name="xmi.idref" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BehavioralFeature.parameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Parameter"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Parameter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Parameter.type"/>
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element ref="UML:Parameter.defaultValue"/>
+      </xs:sequence>
+      <xs:attribute name="kind" use="required" type="xs:NCName"/>
+      <xs:attribute name="visibility" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Parameter.type" type="UML:Classifier"/>
+  <xs:element name="Parameter.defaultValue" type="UML:Expression"/>
+  <xs:element name="Stereotype">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:Stereotype.baseClass"/>
+      </xs:sequence>
+      <xs:attribute name="isAbstract" type="xs:boolean"/>
+      <xs:attribute name="isLeaf" type="xs:boolean"/>
+      <xs:attribute name="isRoot" type="xs:boolean"/>
+      <xs:attribute name="name" type="xs:NCName"/>
+      <xs:attribute name="xmi.id"/>
+      <xs:attribute name="xmi.idref"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Stereotype.baseClass" type="xs:NCName"/>
+  <xs:element name="Transition">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="UML:Transition.trigger"/>
+        <xs:element minOccurs="0" ref="UML:Transition.guard"/>
+        <xs:element minOccurs="0" ref="UML:Transition.effect"/>
+        <xs:element minOccurs="0" ref="UML:ModelElement.taggedValue"/>
+      </xs:sequence>
+      <xs:attribute name="source"/>
+      <xs:attribute name="target"/>
+      <xs:attribute name="visibility" type="xs:NCName"/>
+      <xs:attribute name="xmi.id"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transition.trigger">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Event"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Event">
+    <xs:complexType>
+      <xs:attribute name="name" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transition.guard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Guard"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Guard">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:Guard.expression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Guard.expression">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:BooleanExpression"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BooleanExpression">
+    <xs:complexType>
+      <xs:attribute name="body" use="required"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Transition.effect" type="UML:ActionSequence"/>
+  <xs:complexType name="ActionSequence">
+    <xs:sequence>
+      <xs:element ref="UML:ActionSequenceSub"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ActionSequenceSub">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:ActionSequence.action"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActionSequence.action">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UML:UninterpretedAction"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UninterpretedAction">
+    <xs:complexType>
+      <xs:sequence minOccurs="0">
+        <xs:element ref="UML:ModelElement.taggedValue"/>
+        <xs:element name="XMI.extension" form="unqualified">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="UML:BehavioralFeature.parameter"/>
+            </xs:sequence>
+            <xs:attribute name="xmi.extender" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="isAsynchronous" type="xs:boolean"/>
+      <xs:attribute name="name" use="required"/>
+      <xs:attribute name="visibility" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

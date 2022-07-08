@@ -1,0 +1,1658 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#"
+     xml:base="http://www.semanticweb.org/21926/ontologies/2022/5/TIM"
+     xmlns:TIM="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM/2.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#allocate -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#allocate">
+        <rdfs:comment>block 2 action partition</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#dempose">
+        <rdfs:comment>DeriveReqt dempose BlockSubReqt</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#deriveReqt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#deriveReqt">
+        <rdfs:comment>stakeholer mission 2 derived requirement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode"/>
+        <rdfs:comment>action partition or transition 2 action</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasBlock -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasBlock">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode"/>
+        <rdfs:comment>bdd 2 block</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCommonRelation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCommonRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge"/>
+        <rdfs:comment>bdd 2 common relation</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondBlock -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondBlock">
+        <rdfs:comment>The block associated with a guard</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondPara -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondPara">
+        <rdfs:comment>The block parameter associated with a guard</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDo">
+        <rdfs:comment>state or transition or object flow or region 2 do</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoBlock -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoBlock">
+        <rdfs:comment>The block associated with a do</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoPara -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoPara">
+        <rdfs:comment>The block parameter associated with a do</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>diagram 2 edge</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEntryAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEntryAction">
+        <rdfs:comment>state or region 2 action</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEntryDo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEntryDo">
+        <rdfs:comment>state or region 2 do</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEvent">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode"/>
+        <rdfs:comment>action partition 2 event</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasExitAction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasExitAction">
+        <rdfs:comment>state or region 2 action</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasExitDo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasExitDo">
+        <rdfs:comment>state or region 2 do</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasGeneralization -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasGeneralization">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge"/>
+        <rdfs:comment>bdd  2  generalization</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasGuard -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasGuard">
+        <rdfs:comment>transition or object flow 2 guard</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasMapping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasMapping">
+        <rdfs:comment>derived requirement 2 mapping</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>diagram 2 node</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObjectFlow -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasObjectFlow">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge"/>
+        <rdfs:comment>action patition 2 object flow</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasRegion -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasRegion">
+        <rdfs:comment>stm or region 2 region</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasRequirement">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode"/>
+        <rdfs:comment>req 2 requirement</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReturn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReturn">
+        <rdfs:comment>指定了块操作的返回值（Object），与对象流的Object一致</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasSource">
+        <rdfs:comment>edge 2 start node</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasState">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasNode"/>
+        <rdfs:comment>stm or region 2 state</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTarget">
+        <rdfs:comment>edge 2 end node</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTransition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasTransition">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasEdge"/>
+        <rdfs:comment>stm or region 2 transition</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#haveActPartition -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#haveActPartition">
+        <rdfs:comment>act 2 action partition</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#haveFunction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#haveFunction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment>block 2 block function</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#havePara -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#havePara">
+        <rdfs:comment>block 2 parameter</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#havePart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#havePart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isDerivedFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isDerivedFrom">
+        <rdfs:comment>derived requirement 2 stakeholder mission</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isNestIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isNestIn">
+        <rdfs:comment>block function 2 block function</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isPartOf">
+        <rdfs:comment>block 2 block
+isPartOf(?a, ?b) = T , if a is a part of b</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isTracedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#isTracedBy">
+        <rdfs:comment>block 2 mapping</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAE">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge"/>
+        <rdfs:comment>map to act edge</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToAN">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge"/>
+        <rdfs:comment>map to act node</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBF">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge"/>
+        <rdfs:comment>map to block function</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBP -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapToBP">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge"/>
+        <rdfs:comment>map to block parameter</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mappingEdge">
+        <rdfs:comment>mapping&apos;s edge</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#nest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#nest">
+        <rdfs:comment>block function 2 block function</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#subTrace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#subTrace"/>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trace -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trace">
+        <rdfs:comment>mapping 2 block</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCardinality -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCardinality">
+        <rdfs:comment>cardinality on bdd edge</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasCondValue">
+        <rdfs:comment>description of a guard</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasDoValue">
+        <rdfs:comment>description of a do</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtID">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>user-defined requirement&apos;s ID</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtName">
+        <rdfs:comment>user-defined requirement&apos;s name</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasReqtValue">
+        <rdfs:comment>description of a requirement</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#hasValueType">
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complex</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Integer</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Number</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</rdf:first>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Real</rdf:first>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">String</rdf:first>
+                                                                                                        <rdf:rest>
+                                                                                                            <rdf:Description>
+                                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</rdf:first>
+                                                                                                                <rdf:rest>
+                                                                                                                    <rdf:Description>
+                                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</rdf:first>
+                                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                                    </rdf:Description>
+                                                                                                                </rdf:rest>
+                                                                                                            </rdf:Description>
+                                                                                                        </rdf:rest>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment>指定了参数或对象的类型</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActPartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActPartition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:comment>action partition of a block instance</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Action -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Action">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>action of act</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActivityDiagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ActivityDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:comment>act of a system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Aggregation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Aggregation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>BDD 聚合</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Begin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Begin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode"/>
+        <rdfs:comment>begin node</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>block of bdd</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockDefineDiagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockDefineDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:comment>bdd</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <rdfs:comment>function of block</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockPara -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockPara">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <rdfs:comment>parameter of block</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>Block level sub-requirements</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>BDD 一般关系</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlSubsystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlSubsystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>derived requirement</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Do -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Do">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <rdfs:comment>do of state or region</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#End">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode"/>
+        <rdfs:comment>End node</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>event of act</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Generalization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Generalization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>BDD 派生</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Guard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Guard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        <rdfs:comment>guard of state or region</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#HMISubsystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#HMISubsystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#InEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#InEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>Input event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>The edges in the diagram</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Localization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Localization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MapServerSubsystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MapServerSubsystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Mapping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Mapping">
+        <rdfs:comment>Horizontal relationships between SysML diagrams, from requirements tracing to design</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MergeNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MergeNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode"/>
+        <rdfs:comment>merge node</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Object">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ObjectFlow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>活动图 活动间数据流 object flow of act</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#OutEvent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#OutEvent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Event"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>output event</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionSubsystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionSubsystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PlanningSubsystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PlanningSubsystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>region of stm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>requirement of req</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#RequirementDiagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#RequirementDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:comment>req</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Sensing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Sensing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SensorFusion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SensorFusion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>special node of act or stm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SplitNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SplitNode">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SpecialNode"/>
+        <rdfs:comment>split node</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StakeholderMission -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StakeholderMission">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Requirement"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>stakeholder mission</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#State">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        <rdfs:comment>state node of stm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StateMachineDiagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StateMachineDiagram">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+        <rdfs:comment>stm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram">
+        <rdfs:comment>SysML Diagram</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge">
+        <rdfs:comment>SysML edge</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode">
+        <rdfs:comment>SysML node</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem">
+        <rdfs:comment>SysML node&apos;s and SysML edge&apos;s complex semantics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryExecution -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryExecution">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryGeneration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryGeneration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryManagement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryManagement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Transition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Transition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#IntraDiagramEdge"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+        <rdfs:comment>状态机图 状态机图 transition of stm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#VehiclePlatformStabilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#VehiclePlatformStabilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Block"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#AutoCarBDD -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#AutoCarBDD">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockDefineDiagram"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalmap"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localization"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localmap"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensing"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensorfusion"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryexecution"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorygeneration"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorymanagement"/>
+        <hasBlock rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#vehicleplatformstabilization"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#costmapInput"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#obstacleUpdate"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionInput"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryInput"/>
+        <hasCommonRelation rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#userInput"/>
+        <hasGeneralization rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#generalization0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#AutoCarReq -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#AutoCarReq">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#RequirementDiagram"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.2"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.3"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.2"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.1"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.2"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.3"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.4"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.5"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-02"/>
+        <hasRequirement rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-03"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.1.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Destination Input</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall recieve the input for final destination before the start of  journey.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.1.2</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map Input</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall recieve detailed digital map before the start of journey.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.2.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Local Map</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#Local map shall be used for precise trajectory generation</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.3.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensing</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall sense its internal state and external environment.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.3.2</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sensor Fusion</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall combine the inputs from different sensors to produce the required information.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.3.3</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Localization</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall locate its position on given map.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.4.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collision Free</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall generatecollision free trajectory toward its destination.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.4.2</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Executable Trajetory</hasReqtName>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Map</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#Global map shall be used to roughly plan a path from start to destination.</hasReqtValue>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall generate an executable trajectory.
+</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.4.3</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory Management</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall manage trajectory generation depending on the inputs recieved.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.5.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory Execution</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall follow the generated trajectory.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockSubReqt"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1.5.2</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vehicle platform</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall stabilize the platform as the trajectory is followed.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.1"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.1.2"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1.1</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMI Requirement Spec</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#For the vehicle to be
+ able to drive by itself to a user defined destination, it is required to receive the
+ destination and a digital map as inputs, before the start of journey.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.2.1"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.2"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1.2</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Map ServerRequirement Spec</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#To ensure that the input map is available to the
+ vehicle in a perceivable format and the input destination is added in relation to
+ the given map, Map Server is required for processing the raw input data.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.1"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.2"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.3.3"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1.3</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception Requirement Spec</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#Since it is expected by the vehicle to
+ autonomously navigate its way to destination, it shall understand the external
+ environment, its internal state and its location with reference to the given map.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.1"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.2"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.4.3"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-02"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1.4</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Planning Requirement Spec</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#To achieve autonomous driving functionality of
+ the vehicle, it shall plan its way towards the goal by generating a virtual
+ trajectory for the vehicle to follow. Additionally, to ensure that the obstacles
+ are efficiently avoided from potential collisions, when encountered, the
+ generated trajectory shall be managed according to the type of obstacle.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#DeriveRequirement"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.1"/>
+        <dempose rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#B1.5.2"/>
+        <isDerivedFrom rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D1.5</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Control Requirement Spec</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#It requires that the vehicle shall set the values of
+ actuators for it to autonomously follow the derived trajectory and perform
+ additional stabilization maneuvers to ensure that it stays on the defined track.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StakeholderMission"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.1"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.2"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.3"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.4"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.5"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S-01</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autonomous Travel</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The Vehicle shall autonomously travel from start point to the destination.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StakeholderMission"/>
+        <deriveReqt rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#D1.4"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S-02</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collision Avoidance</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall avoid colliding with the potenial obstacles.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#S-03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#StakeholderMission"/>
+        <hasReqtID rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S-03</hasReqtID>
+        <hasReqtName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel Constrain</hasReqtName>
+        <hasReqtValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;memo&gt;#NOTES#The vehicle shall travel in the shortest possible time.</hasReqtValue>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#ControlSubsystem"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#control_actuators"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#end_vehicle"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_started"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryexecution"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#vehicleplatformstabilization"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#costmapInput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#costmapInput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#currentLocation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#currentLocation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockPara"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MapPoint</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_local_costmap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_local_costmap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CostMap</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#end_vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#end_vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_offline_path -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_offline_path">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Path</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_trajectory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_trajectory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trajectory</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#generalization0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#generalization0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Generalization"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localmap"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalmap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalmap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalmap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#GlobalMap"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_started -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#is_started">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boolean</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Localization"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localmap -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localmap">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#LocalMap"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#MapServerSubsystem"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_global_costmap"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#derive_local_costmap"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#globalmap"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localmap"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#obstacleUpdate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#obstacleUpdate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#mapserversubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceive_environment_autoCar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceive_environment_autoCar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perception</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionInput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionInput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PerceptionSubsystem"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceive_environment_autoCar"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#localization"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensing"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensorfusion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#PlanningSubsystem"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_end_vehicle"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#broadcast_start_vehicle"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_offline_path"/>
+        <haveFunction rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#gene_trajectory"/>
+        <havePara rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#currentLocation"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorygeneration"/>
+        <havePart rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorymanagement"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Sensing"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensorfusion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#sensorfusion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SensorFusion"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#perceptionsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#start_vehicle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#BlockFunction"/>
+        <hasValueType rdf:datatype="http://www.w3.org/2001/XMLSchema#string">void</hasValueType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryInput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryInput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
+        <hasSource rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+        <hasTarget rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryexecution -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectoryexecution">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryExecution"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorygeneration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorygeneration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryGeneration"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorymanagement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#trajectorymanagement">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#TrajectoryManagement"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#planningsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#userInput -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#userInput">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#CommonRelation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/21926/ontologies/2022/5/TIM#vehicleplatformstabilization -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#vehicleplatformstabilization">
+        <rdf:type rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#VehiclePlatformStabilization"/>
+        <isPartOf rdf:resource="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#controlsubsystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#Mapping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLOtherItem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLDiagram"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLEdge"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/21926/ontologies/2022/5/TIM#SysMLNode"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

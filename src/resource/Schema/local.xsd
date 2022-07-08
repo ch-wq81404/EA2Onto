@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:UML="omg.org/UML1.3">
+  <xs:import namespace="omg.org/UML1.3" schemaLocation="autoCar.xsd"/>
+  <xs:element name="XMI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="XMI.header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="XMI.documentation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="XMI.exporter" type="xs:string"/>
+                    <xs:element name="XMI.exporterVersion" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="XMI.content">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="UML:Model"/>
+              <xs:choice maxOccurs="unbounded">
+                <xs:element ref="UML:TaggedValue"/>
+                <xs:element ref="UML:Diagram"/>
+              </xs:choice>
+              <xs:element maxOccurs="unbounded" ref="UML:DiagramElementSub"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="XMI.difference">
+          <xs:complexType/>
+        </xs:element>
+        <xs:element name="XMI.extensions">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EAModel.paramSub">
+                <xs:complexType/>
+              </xs:element>
+              <xs:element maxOccurs="unbounded" name="EAStub">
+                <xs:complexType>
+                  <xs:attribute name="UMLType" use="required" type="xs:NCName"/>
+                  <xs:attribute name="name" use="required" type="xs:NCName"/>
+                  <xs:attribute name="xmi.id" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            
+            <xs:attribute name="xmi.extender" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="timestamp" use="required"/>
+      <xs:attribute name="xmi.version" use="required" type="xs:decimal"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
